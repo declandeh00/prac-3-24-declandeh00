@@ -45,7 +45,10 @@ const App = () => {
     if (loading) {
         return (
             <div className="loader-container">
+                <div>
                 <div className="loader"></div>
+                <h1>Loading...</h1>
+                </div>
             </div>
         );
     }
@@ -65,7 +68,7 @@ const App = () => {
                         checked={isChecked}
                         onChange={handleCheckboxChange} 
                     />
-                    True and accurate
+                    This information is True and accurate
                 </label>
                 <button type="submit">
                     Submit
@@ -74,7 +77,7 @@ const App = () => {
             {showError && (
                 <div className="error-popup">
                     <div className="error-content">
-                        <p>You must agree to the terms by checking the checkbox before submitting.</p>
+                        <p>Please make sure that you information is correct. If the information is correct please check the True and Accurate statement</p>
                         <button onClick={closeErrorPopup}>Close</button>
                     </div>
                 </div>
